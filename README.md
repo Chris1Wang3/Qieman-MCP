@@ -107,9 +107,11 @@
 
 ### 步骤 1：获取 API Key
 
-1. 访问 [且慢投顾官网](https://www.qieman.com) 注册账号
-2. 进入开发者中心申请 MCP API Key
+1. 访问 [且慢 MCP 服务页面](https://qieman.com/mcp) 注册账号
+2. 在个人中心申请并获取 MCP API Key
 3. 保存您的 API Key（后续配置时需要）
+
+> 💡 **提示**：详细的配置指南和 API Key 管理请访问 [https://qieman.com/mcp](https://qieman.com/mcp)
 
 ### 步骤 2：在 Claude Desktop 中配置
 
@@ -136,9 +138,51 @@
 
 ### 步骤 3：在其他 MCP 客户端中使用
 
-**Cursor / Windsurf / Cline 等 IDE**
+#### Cursor IDE
 
-在 `.cursor/mcp.json` 或对应配置文件中添加：
+**配置步骤**：
+1. 打开 Cursor，点击**设置**
+2. 点击 **MCP**
+3. 点击**添加 MCP Server**
+4. 输入以下配置并保存：
+
+```json
+{
+  "mcpServers": {
+    "Qieman": {
+      "url": "https://stargate.yingmi.com/mcp/sse?apiKey=your-api-key-here"
+    }
+  }
+}
+```
+
+**配置说明**：
+- 将 `your-api-key-here` 替换为您的实际 API Key
+- Cursor 下载地址：[https://www.cursor.com/cn](https://www.cursor.com/cn)
+
+#### Cherry Studio
+
+**配置步骤**：
+1. 打开 Cherry Studio
+2. 类型选择：**sse**
+3. 输入 MCP Server 地址：
+
+```
+https://stargate.yingmi.com/mcp/sse?apiKey=your-api-key-here
+```
+
+**配置说明**：
+- 将 `your-api-key-here` 替换为您的实际 API Key
+- 连接类型必须选择：**sse**
+- Cherry Studio 下载地址：[https://cherry-ai.com/](https://cherry-ai.com/)
+
+**推荐配置**（可选）：
+- 推荐模型：火山引擎 Deepseek-v3 模型
+- 模型名称：`deepseek-v3-250324`
+
+#### Windsurf / Cline 等其他 IDE
+
+在对应配置文件中添加：
 
 ```json
 {
@@ -153,16 +197,16 @@
 }
 ```
 
-**Cherry Studio / 其他支持 SSE 的客户端**
+或直接使用 URL 参数方式：
 
-直接配置 SSE URL：
-```
-https://stargate.yingmi.com/mcp/sse
-```
-
-并在请求头中添加：
-```
-Authorization: Bearer your-api-key-here
+```json
+{
+  "mcpServers": {
+    "qieman": {
+      "url": "https://stargate.yingmi.com/mcp/sse?apiKey=your-api-key-here"
+    }
+  }
+}
 ```
 
 ### 使用示例
