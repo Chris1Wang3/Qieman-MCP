@@ -101,30 +101,17 @@
 
 ## 快速开始
 
-### 安装配置
+### 接入方式：MCP-SSE（云托管）
 
-1. 克隆仓库
-```bash
-git clone https://github.com/Chris1Wang3/Qieman-MCP.git
-cd Qieman-MCP
-```
+且慢投顾 MCP Server 采用 **云托管模式**，无需在本地安装任何依赖或运行代码，只需通过 SSE URL 连接即可使用。
 
-2. 安装依赖
-```bash
-npm install
-# 或
-pip install -r requirements.txt
-```
+### 步骤 1：获取 API Key
 
-3. 配置环境变量
-```bash
-# 创建 .env 文件
-cp .env.example .env
+1. 访问 [且慢投顾官网](https://www.qieman.com) 注册账号
+2. 进入开发者中心申请 MCP API Key
+3. 保存您的 API Key（后续配置时需要）
 
-# 编辑 .env 文件，填入必要的 API 密钥
-```
-
-### 在 Claude Desktop 中使用
+### 步骤 2：在 Claude Desktop 中配置
 
 在 Claude Desktop 配置文件中添加：
 
@@ -132,11 +119,50 @@ cp .env.example .env
 {
   "mcpServers": {
     "qieman": {
-      "command": "node",
-      "args": ["/path/to/Qieman-MCP/index.js"]
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sse"],
+      "env": {
+        "SSE_URL": "https://stargate.yingmi.com/mcp/sse",
+        "QIEMAN_API_KEY": "your-api-key-here"
+      }
     }
   }
 }
+```
+
+**配置说明**：
+- `SSE_URL`: 且慢投顾 MCP 服务地址（固定值）
+- `QIEMAN_API_KEY`: 您在且慢投顾申请的 API Key
+
+### 步骤 3：在其他 MCP 客户端中使用
+
+**Cursor / Windsurf / Cline 等 IDE**
+
+在 `.cursor/mcp.json` 或对应配置文件中添加：
+
+```json
+{
+  "mcpServers": {
+    "qieman": {
+      "url": "https://stargate.yingmi.com/mcp/sse",
+      "headers": {
+        "Authorization": "Bearer your-api-key-here"
+      }
+    }
+  }
+}
+```
+
+**Cherry Studio / 其他支持 SSE 的客户端**
+
+直接配置 SSE URL：
+```
+https://stargate.yingmi.com/mcp/sse
+```
+
+并在请求头中添加：
+```
+Authorization: Bearer your-api-key-here
 ```
 
 ### 使用示例
@@ -158,11 +184,13 @@ cp .env.example .env
 
 ## 技术特点
 
+- **云托管服务**：无需本地安装，通过 SSE URL 即连即用
 - **专业可靠**：基于且慢投顾多年积累的金融数据与分析模型
 - **实时更新**：支持实时获取最新基金净值、公告与市场资讯
 - **智能分析**：结合 AI 能力，提供自然语言交互式投资分析
 - **可视化**：内置图表渲染与报告生成能力，结果一目了然
-- **标准协议**：基于 MCP 协议，兼容 Claude Desktop、Cline 等主流 AI 工具
+- **标准协议**：基于 MCP 协议，兼容 Claude Desktop、Cursor、Cline 等主流 AI 工具
+- **安全可控**：API Key 认证，数据传输加密，保障信息安全
 
 ## 免责声明
 
