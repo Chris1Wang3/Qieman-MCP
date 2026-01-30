@@ -1,10 +1,11 @@
-# 且慢投顾 MCP Server
+# 且慢 MCP Server
 
-且慢投顾 MCP Server 是一个基于模型上下文协议（MCP）的智能投资顾问服务，为 AI 助手提供专业的基金分析、资产配置、投资组合诊断等金融服务能力。通过自然语言交互，让投资决策更智能、更高效。
+且慢 MCP Server 是一个基于模型上下文协议（MCP）的智能投资顾问服务，为 AI 助手提供专业的基金分析、资产配置、投资组合诊断等金融服务能力。通过自然语言交互，让投资决策更智能、更高效。
 
 ## 核心能力
 
 ### 📊 资产与家庭财务分析
+
 - **资产负债分析**：智能计算资产负债比率、净资产等核心财务指标
 - **现金流分析**：基于家庭收支与资产配置生成现金流健康度报告
 - **家庭成员分析**：统计家庭人数与生命周期阶段，提供定制化建议
@@ -12,6 +13,7 @@
 - **收支结构分析**：可视化年度收支分布与占比，优化财务规划
 
 ### 💼 基金与组合分析
+
 - **基金风险评估**：多维度风险评分与指标分析（波动率、最大回撤、夏普比率等）
 - **组合风险诊断**：基金组合整体风险评估与优化建议
 - **持仓诊断**：深度分析基金配置合理性、相关性与历史回测表现
@@ -20,6 +22,7 @@
 - **回测模拟**：历史数据回测与蒙特卡洛模拟，预测未来收益区间
 
 ### 🔍 基金信息查询
+
 - **基金详情**：批量获取基金净值、业绩、持仓、费率等全面信息
 - **业绩诊断**：基金风险等级、估值水平、业绩归因分析
 - **智能搜索**：支持基金名称模糊匹配、多维度筛选排序
@@ -27,6 +30,7 @@
 - **公告查询**：及时获取基金公告、交易规则、限额信息
 
 ### 📈 专业投资分析
+
 - **行业配置分析**：基金行业偏好、集中度与收益贡献分析
 - **债券指标**：久期、杠杆、信用评级等债券基金专业指标
 - **股票指标**：权益仓位、换手率、择时能力、Brinson归因分析
@@ -34,6 +38,7 @@
 - **策略研究**：基金策略详情、风险信息与资产穿透
 
 ### 🛠️ 辅助工具
+
 - **数据可视化**：ECharts 图表渲染，直观展示分析结果
 - **报告生成**：HTML 转 PDF，一键生成专业投资报告
 - **实时资讯**：财经新闻、热点话题、基金经理观点搜索
@@ -42,16 +47,19 @@
 ## 适用场景
 
 ### 个人投资者
+
 - 快速诊断现有基金组合的风险与收益特征
 - 获取专业的资产配置建议与优化方案
 - 追踪市场热点与基金经理最新观点
 
 ### 投资顾问
+
 - 为客户提供专业的财务规划与资产配置服务
 - 批量分析基金产品，快速生成投资报告
 - 实时监控组合风险，及时调整投资策略
 
 ### 金融研究员
+
 - 深度分析基金业绩归因与风险来源
 - 研究行业配置趋势与市场轮动规律
 - 回测投资策略，验证投资逻辑
@@ -59,6 +67,7 @@
 ## 主要工具清单
 
 ### 资产与家庭财务分析
+
 - `AnalyzeAssetLiability` - 资产负债分析
 - `AnalyzeCashFlow` - 现金流分析
 - `AnalyzeFamilyMembers` - 家庭成员分析
@@ -67,6 +76,7 @@
 - `AnalyzeInvestmentPerformance` - 投资方案表现评估
 
 ### 基金与组合分析
+
 - `AnalyzeFundRisk` - 基金风险分析
 - `AnalyzePortfolioRisk` - 组合风险评估
 - `DiagnoseFundPortfolio` - 基金持仓诊断
@@ -77,6 +87,7 @@
 - `MonteCarloSimulate` - 蒙特卡洛模拟
 
 ### 基金信息查询
+
 - `BatchGetFundNavHistory` - 批量获取历史净值
 - `BatchGetFundsDetail` - 批量获取基金详情
 - `GetBatchFundPerformance` - 批量业绩表现
@@ -85,25 +96,127 @@
 - `GetPopularFund` - 热门基金
 
 ### 专业分析工具
+
 - `getFundIndustryAllocation` - 行业配置分析
 - `getBondIndicator` - 债券指标
 - `getFundBrinsonIndicator` - Brinson归因
 - `getMarketTimingIndicator` - 择时指标
 - `GetStrategyDetails` - 策略详情
 
+### 持仓特征分析
+
+- `fund-sector-preference` - 板块偏好
+- `fund-equity-position` - 权益仓位偏好
+- `getFundTurnoverRate` - 基金换手率（调仓频率）
+- `getFundIndustryPreference` - 行业偏好
+- `getFundInvestmentStyleBatch` - 投资风格偏好
+
+### 能力评价指标
+
+- `fund-recovery-ability` - 回撤修复能力
+
+### 基金持仓分析
+
+- `getQdFundAreaAllocation` - QDII地区配置
+- `getBondFundCreditRatingLevel` - 债基评级查询
+- `getBondAllocationByFundCode` - 券种配置情况
+- `getStockAllocationAndMetricsByFundCode` - 重仓股集中度（权益型基金）
+- `getFundIndustryAllocation` - 行业配置比例
+- `getFundIndustryConcentration` - 行业持仓集中度
+- `BatchGetFundsHolding` - 基金持仓
+
+### 基本信息查询
+
+- `getFundCompanyFundManageAssetsById` - 基金公司管理规模查询
+- `getFundBenchmarkInfo` - 业绩基准（合同基准）
+- `BatchGetFundsFeeRule` - 基金费率规则
+- `BatchGetFundsHolderInfo` - 持有人结构
+- `BatchGetFundsSplitHistory` - 基金拆分记录
+- `BatchGetFundsDividendRecord` - 基金分红记录
+- `BatchGetFundTradeRules` - 基金交易规则
+- `BatchGetFundTradeLimit` - 基金交易限制信息
+
+### 估值指标（权益型基金）
+
+- `getStockAllocationAndMetricsByFundCode` - 市盈率查询
+- `getStockAllocationAndMetricsByFundCode` - 市净率查询
+- `getStockAllocationAndMetricsByFundCode` - 股息率
+- `getStockAllocationAndMetricsByFundCode` - 净资产收益率
+- `getStockAllocationAndMetricsByFundCode` - 总资产收益率
+- `getStockAllocationAndMetricsByFundCode` - 股票净利润增速
+- `getStockAllocationAndMetricsByFundCode` - 股票营业收入增速
+
+### 业绩归因分析
+
+- `getFundIndustryReturns` - 行业收益
+- `getFundBrinsonIndicator` - Brinson归因
+- `getMarketTimingIndicator` - 权益仓位择时
+- `getFundCampisiIndicator` - Campisi归因
+
+### 风险指标
+
+- `getFundRiskInfo` - 基金风险等级
+- `getBondIndicator` - 债基风险（杠杆、敏感性久期、持仓集中度）
+- `getStockAllocationAndMetricsByFundCode` - 持有股票流动性查询（权益型基金）
+- `getFundDiveCount` - 债基异动
+- `GetStrategyRiskInfo` - 策略风险
+
+### 基金筛选
+
+- `filterBondFundByCreditRating` - 信用评级筛选基金
+- `filterBondFundByBondType` - 券种风格筛选基金
+- `filterStockFundByStockTurnover` - 股票换手率筛选基金
+- `getBondFundWithAlertRecord` - 查询发生净值异动的债基
+
+### 策略与投顾
+
+- `GetStrategyDetails` - 策略详情查询
+- `GetStrategyBenchmark` - 查询策略业绩基准
+- `GetStrategyAssetClassAnalysis` - 策略大类资产分布
+- `BatchGetStrategiesComposition` - 批量查询策略持仓
+- `BatchGetPoTradeComposition` - 策略交易成分
+- `StrategySearchByKeyword` - 策略关键词搜索
+- `BatchGetStrategyRiskInfo` - 策略风险匹配
+- `GetFundRelatedStrategies` - 按重仓基金筛选投顾策略
+- `GetSecurityPortfolio` - 基金重仓证券
+
+### 资讯与公告
+
+- `SearchFinancialNews` - 财经资讯
+- `SearchManagerViewpoint` - 基金经理观点
+- `searchRealtimeAiAnalysis` - 实时资讯AI解读
+- `SearchHotTopic` - 热点财经话题榜单
+- `searchInvestAdvisorContent` - 搜索投顾内容
+- `GetFundAnnouncements` - 查询基金公告
+- `GetAnnouncementcontents` - 获取公告内容
+
+### 市场数据
+
+- `GetLatestQuotations` - 市场温度计
+
+### 投资规划
+
+- `GetAssetAllocationPlan` - 获取资产配置方案
+- `GetCompositeModel` - 获取基金投资方案
+- `AnalyzeInvestmentPerformance` - 投资方案表现分析
+
+### 组合与账户
+
+- `GetPortfolioNavHistory` - 组合历史净值
+- `GuessFundCode` - 基金代码模糊匹配
+
 ### 辅助工具
+
 - `RenderEchart` - 图表渲染
 - `RenderHtmlToPdf` - 报告生成
-- `SearchFinancialNews` - 资讯搜索
 - `GetCurrentTime` - 时间工具
-
-完整工具清单请参考仓库文档。
+- `GetTxnDayRange` - 交易日查询
 
 ## 快速开始
 
 ### 接入方式：MCP-SSE（云托管）
 
-且慢投顾 MCP Server 采用 **云托管模式**，无需在本地安装任何依赖或运行代码，只需通过 SSE URL 连接即可使用。
+且慢 MCP Server 采用 **云托管模式**，无需在本地安装任何依赖或运行代码，只需通过 SSE URL 连接即可使用。
 
 ### 步骤 1：获取 API Key
 
@@ -133,6 +246,7 @@
 ```
 
 **配置说明**：
+
 - `SSE_URL`: 且慢投顾 MCP 服务地址（固定值）
 - `QIEMAN_API_KEY`: 您在且慢投顾申请的 API Key
 
@@ -141,6 +255,7 @@
 #### Cursor IDE
 
 **配置步骤**：
+
 1. 打开 Cursor，点击**设置**
 2. 点击 **MCP**
 3. 点击**添加 MCP Server**
@@ -157,12 +272,14 @@
 ```
 
 **配置说明**：
+
 - 将 `your-api-key-here` 替换为您的实际 API Key
 - Cursor 下载地址：[https://www.cursor.com/cn](https://www.cursor.com/cn)
 
 #### Cherry Studio
 
 **配置步骤**：
+
 1. 打开 Cherry Studio
 2. 类型选择：**sse**
 3. 输入 MCP Server 地址：
@@ -172,15 +289,17 @@ https://stargate.yingmi.com/mcp/sse?apiKey=your-api-key-here
 ```
 
 **配置说明**：
+
 - 将 `your-api-key-here` 替换为您的实际 API Key
 - 连接类型必须选择：**sse**
 - Cherry Studio 下载地址：[https://cherry-ai.com/](https://cherry-ai.com/)
 
 **推荐配置**（可选）：
+
 - 推荐模型：火山引擎 Deepseek-v3 模型
 - 模型名称：`deepseek-v3-250324`
 
-#### Windsurf / Cline 等其他 IDE
+#### Windsurf / Trae 等其他 IDE
 
 在对应配置文件中添加：
 
@@ -212,16 +331,19 @@ https://stargate.yingmi.com/mcp/sse?apiKey=your-api-key-here
 ### 使用示例
 
 **场景1：诊断基金组合**
+
 ```
 我持有以下基金：易方达蓝筹精选(005827)、兴全合润(163406)、中欧时代先锋(001938)，请帮我分析组合的风险和相关性。
 ```
 
 **场景2：资产配置建议**
+
 ```
 我有100万资金，风险承受能力中等，希望年化收益8%左右,请帮我设计一个资产配置方案。
 ```
 
 **场景3：基金筛选**
+
 ```
 请帮我筛选近3年年化收益超过15%、最大回撤小于20%的偏股型基金。
 ```
@@ -233,7 +355,7 @@ https://stargate.yingmi.com/mcp/sse?apiKey=your-api-key-here
 - **实时更新**：支持实时获取最新基金净值、公告与市场资讯
 - **智能分析**：结合 AI 能力，提供自然语言交互式投资分析
 - **可视化**：内置图表渲染与报告生成能力，结果一目了然
-- **标准协议**：基于 MCP 协议，兼容 Claude Desktop、Cursor、Cline 等主流 AI 工具
+- **标准协议**：基于 MCP 协议，兼容 Claude Desktop、Cursor、Trae 等主流 AI 工具
 - **安全可控**：API Key 认证，数据传输加密，保障信息安全
 
 ## 免责声明
@@ -247,7 +369,8 @@ MIT License
 ## 联系方式
 
 - GitHub: [@Chris1Wang3](https://github.com/Chris1Wang3)
-- 问题反馈: [Issues](https://github.com/Chris1Wang3/Qieman-MCP/issues)
+- 问题反馈: wangjiaye@yingmi.cn
+- 官网地址: [https://qieman.com/mcp](https://qieman.com/mcp)
 
 ---
 
