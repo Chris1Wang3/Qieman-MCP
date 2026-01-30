@@ -5,6 +5,7 @@ Qieman Investment Advisory MCP Server is an intelligent investment advisory serv
 ## Core Capabilities
 
 ### 📊 Asset & Family Financial Analysis
+
 - **Asset-Liability Analysis**: Intelligent calculation of asset-liability ratios, net worth, and core financial metrics
 - **Cash Flow Analysis**: Generate cash flow health reports based on household income/expenses and asset allocation
 - **Family Member Analysis**: Statistics on family size and life cycle stages with customized recommendations
@@ -12,6 +13,7 @@ Qieman Investment Advisory MCP Server is an intelligent investment advisory serv
 - **Income-Expense Structure Analysis**: Visualize annual income/expense distribution and optimize financial planning
 
 ### 💼 Fund & Portfolio Analysis
+
 - **Fund Risk Assessment**: Multi-dimensional risk scoring and indicator analysis (volatility, max drawdown, Sharpe ratio, etc.)
 - **Portfolio Risk Diagnostics**: Overall portfolio risk assessment and optimization recommendations
 - **Holdings Diagnostics**: In-depth analysis of fund allocation rationality, correlation, and historical backtesting performance
@@ -20,6 +22,7 @@ Qieman Investment Advisory MCP Server is an intelligent investment advisory serv
 - **Backtesting Simulation**: Historical data backtesting and Monte Carlo simulation to predict future return ranges
 
 ### 🔍 Fund Information Query
+
 - **Fund Details**: Batch retrieval of comprehensive fund information including NAV, performance, holdings, and fees
 - **Performance Diagnostics**: Fund risk level, valuation level, and performance attribution analysis
 - **Smart Search**: Support fuzzy matching of fund names and multi-dimensional filtering and sorting
@@ -27,6 +30,7 @@ Qieman Investment Advisory MCP Server is an intelligent investment advisory serv
 - **Announcement Query**: Timely access to fund announcements, trading rules, and limit information
 
 ### 📈 Professional Investment Analysis
+
 - **Industry Allocation Analysis**: Fund industry preferences, concentration, and revenue contribution analysis
 - **Bond Indicators**: Professional bond fund indicators including duration, leverage, and credit ratings
 - **Equity Indicators**: Equity position, turnover rate, market timing ability, and Brinson attribution analysis
@@ -34,6 +38,7 @@ Qieman Investment Advisory MCP Server is an intelligent investment advisory serv
 - **Strategy Research**: Fund strategy details, risk information, and asset penetration
 
 ### 🛠️ Auxiliary Tools
+
 - **Data Visualization**: ECharts chart rendering for intuitive display of analysis results
 - **Report Generation**: HTML to PDF conversion for professional investment reports
 - **Real-time News**: Financial news, hot topics, and fund manager viewpoint search
@@ -42,16 +47,19 @@ Qieman Investment Advisory MCP Server is an intelligent investment advisory serv
 ## Use Cases
 
 ### Individual Investors
+
 - Quickly diagnose risk and return characteristics of existing fund portfolios
 - Obtain professional asset allocation recommendations and optimization solutions
 - Track market hotspots and latest fund manager viewpoints
 
 ### Investment Advisors
+
 - Provide clients with professional financial planning and asset allocation services
 - Batch analyze fund products and quickly generate investment reports
 - Monitor portfolio risks in real-time and adjust investment strategies promptly
 
 ### Financial Researchers
+
 - In-depth analysis of fund performance attribution and risk sources
 - Research industry allocation trends and market rotation patterns
 - Backtest investment strategies and validate investment logic
@@ -59,6 +67,7 @@ Qieman Investment Advisory MCP Server is an intelligent investment advisory serv
 ## Main Tool List
 
 ### Asset & Family Financial Analysis
+
 - `AnalyzeAssetLiability` - Asset-liability analysis
 - `AnalyzeCashFlow` - Cash flow analysis
 - `AnalyzeFamilyMembers` - Family member analysis
@@ -67,6 +76,7 @@ Qieman Investment Advisory MCP Server is an intelligent investment advisory serv
 - `AnalyzeInvestmentPerformance` - Investment performance evaluation
 
 ### Fund & Portfolio Analysis
+
 - `AnalyzeFundRisk` - Fund risk analysis
 - `AnalyzePortfolioRisk` - Portfolio risk assessment
 - `DiagnoseFundPortfolio` - Fund holdings diagnostics
@@ -77,6 +87,7 @@ Qieman Investment Advisory MCP Server is an intelligent investment advisory serv
 - `MonteCarloSimulate` - Monte Carlo simulation
 
 ### Fund Information Query
+
 - `BatchGetFundNavHistory` - Batch NAV history retrieval
 - `BatchGetFundsDetail` - Batch fund details retrieval
 - `GetBatchFundPerformance` - Batch performance metrics
@@ -85,19 +96,121 @@ Qieman Investment Advisory MCP Server is an intelligent investment advisory serv
 - `GetPopularFund` - Popular funds
 
 ### Professional Analysis Tools
+
 - `getFundIndustryAllocation` - Industry allocation analysis
 - `getBondIndicator` - Bond indicators
 - `getFundBrinsonIndicator` - Brinson attribution
 - `getMarketTimingIndicator` - Market timing indicators
 - `GetStrategyDetails` - Strategy details
 
+### Holdings Characteristics Analysis
+
+- `fund-sector-preference` - Sector preference
+- `fund-equity-position` - Equity position preference
+- `getFundTurnoverRate` - Fund turnover rate (rebalancing frequency)
+- `getFundIndustryPreference` - Industry preference
+- `getFundInvestmentStyleBatch` - Investment style preference
+
+### Capability Evaluation Indicators
+
+- `fund-recovery-ability` - Drawdown recovery ability
+
+### Fund Holdings Analysis
+
+- `getQdFundAreaAllocation` - QDII regional allocation
+- `getBondFundCreditRatingLevel` - Bond fund credit rating query
+- `getBondAllocationByFundCode` - Bond type allocation
+- `getStockAllocationAndMetricsByFundCode` - Top holdings concentration (equity funds)
+- `getFundIndustryAllocation` - Industry allocation proportion
+- `getFundIndustryConcentration` - Industry holdings concentration
+- `BatchGetFundsHolding` - Fund holdings
+
+### Basic Information Query
+
+- `getFundCompanyFundManageAssetsById` - Fund company AUM query
+- `getFundBenchmarkInfo` - Performance benchmark (contract benchmark)
+- `BatchGetFundsFeeRule` - Fund fee rules
+- `BatchGetFundsHolderInfo` - Holder structure
+- `BatchGetFundsSplitHistory` - Fund split records
+- `BatchGetFundsDividendRecord` - Fund dividend records
+- `BatchGetFundTradeRules` - Fund trading rules
+- `BatchGetFundTradeLimit` - Fund trading limits
+
+### Valuation Indicators (Equity Funds)
+
+- `getStockAllocationAndMetricsByFundCode` - P/E ratio query
+- `getStockAllocationAndMetricsByFundCode` - P/B ratio query
+- `getStockAllocationAndMetricsByFundCode` - Dividend yield
+- `getStockAllocationAndMetricsByFundCode` - ROE (Return on Equity)
+- `getStockAllocationAndMetricsByFundCode` - ROA (Return on Assets)
+- `getStockAllocationAndMetricsByFundCode` - Net profit growth rate
+- `getStockAllocationAndMetricsByFundCode` - Revenue growth rate
+
+### Performance Attribution Analysis
+
+- `getFundIndustryReturns` - Industry returns
+- `getFundBrinsonIndicator` - Brinson attribution
+- `getMarketTimingIndicator` - Equity position timing
+- `getFundCampisiIndicator` - Campisi attribution
+
+### Risk Indicators
+
+- `getFundRiskInfo` - Fund risk level
+- `getBondIndicator` - Bond fund risk (leverage, duration, concentration)
+- `getStockAllocationAndMetricsByFundCode` - Stock liquidity query (equity funds)
+- `getFundDiveCount` - Bond fund anomaly
+- `GetStrategyRiskInfo` - Strategy risk
+
+### Fund Screening
+
+- `filterBondFundByCreditRating` - Credit rating screening
+- `filterBondFundByBondType` - Bond type style screening
+- `filterStockFundByStockTurnover` - Stock turnover screening
+- `getBondFundWithAlertRecord` - Query bond funds with NAV anomalies
+
+### Strategy & Advisory
+
+- `GetStrategyDetails` - Strategy details query
+- `GetStrategyBenchmark` - Strategy benchmark query
+- `GetStrategyAssetClassAnalysis` - Strategy asset class allocation
+- `BatchGetStrategiesComposition` - Batch strategy holdings query
+- `BatchGetPoTradeComposition` - Strategy trading composition
+- `StrategySearchByKeyword` - Strategy keyword search
+- `BatchGetStrategyRiskInfo` - Strategy risk matching
+- `GetFundRelatedStrategies` - Filter advisory strategies by holdings
+- `GetSecurityPortfolio` - Fund top holdings securities
+
+### News & Announcements
+
+- `SearchFinancialNews` - Financial news
+- `SearchManagerViewpoint` - Fund manager viewpoints
+- `searchRealtimeAiAnalysis` - Real-time AI news analysis
+- `SearchHotTopic` - Hot financial topics
+- `searchInvestAdvisorContent` - Search advisory content
+- `GetFundAnnouncements` - Fund announcements query
+- `GetAnnouncementcontents` - Get announcement contents
+
+### Market Data
+
+- `GetLatestQuotations` - Market thermometer
+
+### Investment Planning
+
+- `GetAssetAllocationPlan` - Get asset allocation plan
+- `GetCompositeModel` - Get fund investment plan
+- `AnalyzeInvestmentPerformance` - Investment plan performance analysis
+
+### Portfolio & Account
+
+- `GetPortfolioNavHistory` - Portfolio NAV history
+- `GuessFundCode` - Fund code fuzzy matching
+
 ### Auxiliary Tools
+
 - `RenderEchart` - Chart rendering
 - `RenderHtmlToPdf` - Report generation
-- `SearchFinancialNews` - News search
 - `GetCurrentTime` - Time utility
-
-For the complete tool list, please refer to the repository documentation.
+- `GetTxnDayRange` - Trading day query
 
 ## Quick Start
 
@@ -133,6 +246,7 @@ Add to your Claude Desktop configuration file:
 ```
 
 **Configuration Notes**:
+
 - Replace `your-api-key-here` with your actual API Key
 - `SSE_URL`: Qieman MCP service address (fixed value)
 
@@ -141,6 +255,7 @@ Add to your Claude Desktop configuration file:
 #### Cursor IDE
 
 **Configuration Steps**:
+
 1. Open Cursor, click **Settings**
 2. Click **MCP**
 3. Click **Add MCP Server**
@@ -157,12 +272,14 @@ Add to your Claude Desktop configuration file:
 ```
 
 **Configuration Notes**:
+
 - Replace `your-api-key-here` with your actual API Key
 - Cursor download: [https://www.cursor.com/cn](https://www.cursor.com/cn)
 
 #### Cherry Studio
 
 **Configuration Steps**:
+
 1. Open Cherry Studio
 2. Type selection: **sse**
 3. Enter MCP Server address:
@@ -172,15 +289,17 @@ https://stargate.yingmi.com/mcp/sse?apiKey=your-api-key-here
 ```
 
 **Configuration Notes**:
+
 - Replace `your-api-key-here` with your actual API Key
 - Connection type must be: **sse**
 - Cherry Studio download: [https://cherry-ai.com/](https://cherry-ai.com/)
 
 **Recommended Configuration** (Optional):
+
 - Recommended model: Volcano Engine Deepseek-v3 model
 - Model name: `deepseek-v3-250324`
 
-#### Windsurf / Cline / Other IDEs
+#### Windsurf / Trae/ Other IDEs
 
 Add to corresponding configuration file:
 
@@ -212,16 +331,19 @@ Or use URL parameter method directly:
 ### Usage Examples
 
 **Scenario 1: Diagnose Fund Portfolio**
+
 ```
 I hold the following funds: E Fund Blue Chip Select (005827), Xingquan Heren (163406), China Europe Pioneer (001938). Please analyze the portfolio's risk and correlation.
 ```
 
 **Scenario 2: Asset Allocation Recommendation**
+
 ```
 I have 1 million yuan in capital with moderate risk tolerance and expect an annualized return of around 8%. Please design an asset allocation plan for me.
 ```
 
 **Scenario 3: Fund Screening**
+
 ```
 Please help me screen equity funds with annualized returns exceeding 15% and maximum drawdown less than 20% over the past 3 years.
 ```
@@ -233,7 +355,7 @@ Please help me screen equity funds with annualized returns exceeding 15% and max
 - **Real-time Updates**: Support real-time retrieval of latest fund NAV, announcements, and market news
 - **Intelligent Analysis**: Combined with AI capabilities for natural language interactive investment analysis
 - **Visualization**: Built-in chart rendering and report generation for clear results
-- **Standard Protocol**: Based on MCP protocol, compatible with Claude Desktop, Cursor, Cline and other mainstream AI tools
+- **Standard Protocol**: Based on MCP protocol, compatible with Claude Desktop, Cursor, Trae and other mainstream AI tools
 - **Secure & Controlled**: API Key authentication, encrypted data transmission for information security
 
 ## Disclaimer
@@ -247,7 +369,7 @@ MIT License
 ## Contact
 
 - GitHub: [@Chris1Wang3](https://github.com/Chris1Wang3)
-- Issue Tracker: [Issues](https://github.com/Chris1Wang3/Qieman-MCP/issues)
+- Issue Tracker:wangjaye@yingmi.cn
 - Official Website: [https://qieman.com/mcp](https://qieman.com/mcp)
 
 ---
