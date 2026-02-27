@@ -287,10 +287,10 @@ I hold the following funds: E Fund Blue Chip Select (005827), Xingquan Heren (16
 I have 1 million yuan in capital with moderate risk tolerance and expect an annualized return of around 8%. Please design an asset allocation plan for me.
 ```
 
-**Scenario 3: Fund Screening**
+**Scenario 3: Performance Attribution Analysis**
 
 ```
-Please help me screen equity funds with annualized returns exceeding 15% and maximum drawdown less than 20% over the past 3 years.
+Using the Campisi model, break down the total return of Huaxia Bond Fund Class A (fund code: 001001) from June 30 to September 30, 2025. What are the contribution ratios of interest rate changes, credit spread movements, coupon income, and other factors?
 ```
 
 ## Technical Features
