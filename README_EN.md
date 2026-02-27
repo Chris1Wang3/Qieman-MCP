@@ -319,4 +319,4 @@ MIT License
 
 ---
 
-**Powered by Qieman Investment Advisory with Professional Financial Data Support**
+**Powered by Yingmi Qieman Investment Advisory with Professional Financial Data Support**
