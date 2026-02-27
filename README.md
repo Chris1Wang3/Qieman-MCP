@@ -24,7 +24,7 @@
 ### 🔍 基金信息查询
 
 - **基金详情**：批量获取基金净值、业绩、持仓、费率等全面信息
-- **业绩诊断**：基金风险等级、估值水平、业绩归因分析
+- **业绩诊断**：估值水平、业绩归因分析
 - **智能搜索**：支持基金名称模糊匹配、多维度筛选排序
 - **热门基金**：实时追踪市场热门基金与投资趋势
 - **公告查询**：及时获取基金公告、交易规则、限额信息
@@ -64,159 +64,115 @@
 - 研究行业配置趋势与市场轮动规律
 - 回测投资策略，验证投资逻辑
 
-## 主要工具清单
+## 完整工具清单
 
-### 资产与家庭财务分析
+## 资产与家庭财务分析（5）
 
-- `AnalyzeAssetLiability` - 资产负债分析
-- `AnalyzeCashFlow` - 现金流分析
-- `AnalyzeFamilyMembers` - 家庭成员分析
-- `AnalyzeFinancialIndicators` - 财务指标分析
-- `AnalyzeIncomeExpense` - 收入支出分析
-- `AnalyzeInvestmentPerformance` - 投资方案表现评估
+* AnalyzeAssetLiability - 资产负债分析
+* AnalyzeCashFlow - 现金流分析
+* AnalyzeFamilyMembers - 家庭成员分析
+* AnalyzeFinancialIndicators - 财务指标分析
+* AnalyzeIncomeExpense - 收入支出分析
 
-### 基金与组合分析
+## 基金与组合分析（8）
 
-- `AnalyzeFundRisk` - 基金风险分析
-- `AnalyzePortfolioRisk` - 组合风险评估
-- `DiagnoseFundPortfolio` - 基金持仓诊断
-- `GetAssetAllocation` - 资产配置分析
-- `GetFundAssetClassAnalysis` - 资产大类穿透
-- `GetFundsBackTest` - 组合回测
-- `GetFundsCorrelation` - 相关性分析
-- `MonteCarloSimulate` - 蒙特卡洛模拟
+* AnalyzeFundRisk - 基金风险分析
+* AnalyzePortfolioRisk - 组合风险评估
+* DiagnoseFundPortfolio - 基金持仓诊断
+* GetAssetAllocation - 资产配置分析
+* GetFundAssetClassAnalysis - 资产大类穿透
+* GetFundsBackTest - 组合回测
+* GetFundsCorrelation - 相关性分析
+* MonteCarloSimulate - 蒙特卡洛模拟
 
-### 基金信息查询
+## 基金信息查询（7）
 
-- `BatchGetFundNavHistory` - 批量获取历史净值
-- `BatchGetFundsDetail` - 批量获取基金详情
-- `GetBatchFundPerformance` - 批量业绩表现
-- `GetFundDiagnosis` - 基金诊断
-- `SearchFunds` - 基金搜索
-- `GetPopularFund` - 热门基金
+* BatchGetFundNavHistory - 批量获取历史净值
+* BatchGetFundsDetail - 批量获取基金详情
+* GetBatchFundPerformance - 批量业绩表现
+* GetFundDiagnosis - 基金诊断
+* SearchFunds - 基金搜索
+* GetPopularFund - 热门基金
+* GuessFundCode - 基金代码模糊匹配
 
-### 专业分析工具
+## 持仓特征与能力评价（7）
 
-- `getFundIndustryAllocation` - 行业配置分析
-- `getBondIndicator` - 债券指标
-- `getFundBrinsonIndicator` - Brinson归因
-- `getMarketTimingIndicator` - 择时指标
-- `GetStrategyDetails` - 策略详情
+* fund-sector-preference - 板块偏好
+* fund-equity-position - 权益仓位偏好
+* fund-recovery-ability - 回撤修复能力
+* getFundTurnoverRate - 基金换手率（调仓频率）
+* getFundIndustryPreference - 行业偏好
+* getFundIndustryAllocation - 行业配置比例
+* getFundIndustryConcentration - 行业持仓集中度
 
-### 持仓特征分析
+## 基金持仓 / 归因 / 风险细分（14）
 
-- `fund-sector-preference` - 板块偏好
-- `fund-equity-position` - 权益仓位偏好
-- `getFundTurnoverRate` - 基金换手率（调仓频率）
-- `getFundIndustryPreference` - 行业偏好
-- `getFundInvestmentStyleBatch` - 投资风格偏好
+* getQdFundAreaAllocation - QDII 地区配置
+* getBondFundCreditRatingLevel - 债基评级分布
+* getBondAllocationByFundCode - 券种配置情况
+* getStockAllocationAndMetricsByFundCode - 重仓股与估值指标分析
+* getFundIndustryReturns - 行业收益
+* getFundBrinsonIndicator - Brinson 归因
+* getMarketTimingIndicator - 权益仓位择时
+* getFundCampisiIndicator - Campisi 归因
+* getBondIndicator - 债基风险指标（杠杆/久期/集中度）
+* getFundDiveCount - 债基异动
+* filterBondFundByCreditRating - 信用评级筛选基金
+* filterBondFundByBondType - 券种风格筛选基金
+* filterStockFundByStockTurnover - 股票换手率筛选基金
+* getBondFundWithAlertRecord - 查询发生净值异动的债基
 
-### 能力评价指标
+## 基本信息与交易规则（6）
 
-- `fund-recovery-ability` - 回撤修复能力
+* getFundBenchmarkInfo - 业绩基准（合同基准）
+* BatchGetFundTradeRules - 基金交易规则
+* BatchGetFundTradeLimit - 基金交易限制信息
+* BatchGetFundsSplitHistory - 基金拆分记录
+* BatchGetFundsDividendRecord - 基金分红记录
+* BatchGetFundsHolding - 基金持仓
 
-### 基金持仓分析
+## 策略与投顾（9）
 
-- `getQdFundAreaAllocation` - QDII地区配置
-- `getBondFundCreditRatingLevel` - 债基评级查询
-- `getBondAllocationByFundCode` - 券种配置情况
-- `getStockAllocationAndMetricsByFundCode` - 重仓股集中度（权益型基金）
-- `getFundIndustryAllocation` - 行业配置比例
-- `getFundIndustryConcentration` - 行业持仓集中度
-- `BatchGetFundsHolding` - 基金持仓
+* GetStrategyDetails - 策略详情查询
+* GetStrategyBenchmark - 查询策略业绩基准
+* GetStrategyAssetClassAnalysis - 策略大类资产分布
+* BatchGetStrategiesComposition - 批量查询策略持仓
+* BatchGetPoTradeComposition - 策略交易成分
+* StrategySearchByKeyword - 策略关键词搜索
+* BatchGetStrategyRiskInfo - 批量策略风险匹配
+* GetStrategyRiskInfo - 策略风险查询
+* GetFundRelatedStrategies - 按重仓基金筛选投顾策略
 
-### 基本信息查询
+## 资讯与公告（7）
 
-- `getFundCompanyFundManageAssetsById` - 基金公司管理规模查询
-- `getFundBenchmarkInfo` - 业绩基准（合同基准）
-- `BatchGetFundsFeeRule` - 基金费率规则
-- `BatchGetFundsHolderInfo` - 持有人结构
-- `BatchGetFundsSplitHistory` - 基金拆分记录
-- `BatchGetFundsDividendRecord` - 基金分红记录
-- `BatchGetFundTradeRules` - 基金交易规则
-- `BatchGetFundTradeLimit` - 基金交易限制信息
+* SearchFinancialNews - 财经资讯
+* SearchManagerViewpoint - 基金经理观点
+* searchRealtimeAiAnalysis - 实时资讯 AI 解读
+* SearchHotTopic - 热点财经话题榜单
+* searchInvestAdvisorContent - 搜索投顾内容
+* GetFundAnnouncements - 查询基金公告
+* GetAnnouncementContent - 获取公告内容
 
-### 估值指标（权益型基金）
+## 投资规划与组合（4）
 
-- `getStockAllocationAndMetricsByFundCode` - 市盈率查询
-- `getStockAllocationAndMetricsByFundCode` - 市净率查询
-- `getStockAllocationAndMetricsByFundCode` - 股息率
-- `getStockAllocationAndMetricsByFundCode` - 净资产收益率
-- `getStockAllocationAndMetricsByFundCode` - 总资产收益率
-- `getStockAllocationAndMetricsByFundCode` - 股票净利润增速
-- `getStockAllocationAndMetricsByFundCode` - 股票营业收入增速
+* GetAssetAllocationPlan - 获取资产配置方案
+* GetCompositeModel - 获取基金投资方案
+* AnalyzeInvestmentPerformance - 投资方案表现分析
+* GetPortfolioNavHistory - 组合历史净值
 
-### 业绩归因分析
+## 市场与辅助工具（5）
 
-- `getFundIndustryReturns` - 行业收益
-- `getFundBrinsonIndicator` - Brinson归因
-- `getMarketTimingIndicator` - 权益仓位择时
-- `getFundCampisiIndicator` - Campisi归因
-
-### 风险指标
-
-- `getFundRiskInfo` - 基金风险等级
-- `getBondIndicator` - 债基风险（杠杆、敏感性久期、持仓集中度）
-- `getStockAllocationAndMetricsByFundCode` - 持有股票流动性查询（权益型基金）
-- `getFundDiveCount` - 债基异动
-- `GetStrategyRiskInfo` - 策略风险
-
-### 基金筛选
-
-- `filterBondFundByCreditRating` - 信用评级筛选基金
-- `filterBondFundByBondType` - 券种风格筛选基金
-- `filterStockFundByStockTurnover` - 股票换手率筛选基金
-- `getBondFundWithAlertRecord` - 查询发生净值异动的债基
-
-### 策略与投顾
-
-- `GetStrategyDetails` - 策略详情查询
-- `GetStrategyBenchmark` - 查询策略业绩基准
-- `GetStrategyAssetClassAnalysis` - 策略大类资产分布
-- `BatchGetStrategiesComposition` - 批量查询策略持仓
-- `BatchGetPoTradeComposition` - 策略交易成分
-- `StrategySearchByKeyword` - 策略关键词搜索
-- `BatchGetStrategyRiskInfo` - 策略风险匹配
-- `GetFundRelatedStrategies` - 按重仓基金筛选投顾策略
-- `GetSecurityPortfolio` - 基金重仓证券
-
-### 资讯与公告
-
-- `SearchFinancialNews` - 财经资讯
-- `SearchManagerViewpoint` - 基金经理观点
-- `searchRealtimeAiAnalysis` - 实时资讯AI解读
-- `SearchHotTopic` - 热点财经话题榜单
-- `searchInvestAdvisorContent` - 搜索投顾内容
-- `GetFundAnnouncements` - 查询基金公告
-- `GetAnnouncementcontents` - 获取公告内容
-
-### 市场数据
-
-- `GetLatestQuotations` - 市场温度计
-
-### 投资规划
-
-- `GetAssetAllocationPlan` - 获取资产配置方案
-- `GetCompositeModel` - 获取基金投资方案
-- `AnalyzeInvestmentPerformance` - 投资方案表现分析
-
-### 组合与账户
-
-- `GetPortfolioNavHistory` - 组合历史净值
-- `GuessFundCode` - 基金代码模糊匹配
-
-### 辅助工具
-
-- `RenderEchart` - 图表渲染
-- `RenderHtmlToPdf` - 报告生成
-- `GetCurrentTime` - 时间工具
-- `GetTxnDayRange` - 交易日查询
+* GetLatestQuotations - 市场温度计
+* RenderEchart - 图表渲染
+* RenderHtmlToPdf - 报告生成
+* GetCurrentTime - 时间工具
+* GetTxnDayRange - 交易日查询
 
 ## 快速开始
 
 ### 接入方式：MCP-SSE（云托管）
 
-且慢 MCP Server 采用 **云托管模式**，无需在本地安装任何依赖或运行代码，只需通过 SSE URL 连接即可使用。
+且慢 MCP Server 采用 **云托管模式**，无需本地部署服务端代码；只需在客户端配置 SSE 地址即可使用。部分客户端（如 Claude Desktop）需要 Node.js/npm 运行桥接命令。
 
 ### 步骤 1：获取 API Key
 
@@ -235,11 +191,11 @@
   "mcpServers": {
     "qieman": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-sse"],
-      "env": {
-        "SSE_URL": "https://stargate.yingmi.com/mcp/sse",
-        "QIEMAN_API_KEY": "your-api-key-here"
-      }
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://stargate.yingmi.com/mcp/sse?apiKey=your-api-key-here"
+      ]
     }
   }
 }
@@ -247,8 +203,8 @@
 
 **配置说明**：
 
-- `SSE_URL`: 且慢投顾 MCP 服务地址（固定值）
-- `QIEMAN_API_KEY`: 您在且慢投顾申请的 API Key
+- `mcp-remote`: 用于把远程 SSE MCP 服务桥接为本地 stdio（Claude Desktop 可识别）
+- `https://stargate.yingmi.com/mcp/sse?apiKey=your-api-key-here`: 且慢 MCP SSE 地址（将 `your-api-key-here` 替换为您的真实 API Key）
 
 ### 步骤 3：在其他 MCP 客户端中使用
 
@@ -301,22 +257,7 @@ https://stargate.yingmi.com/mcp/sse?apiKey=your-api-key-here
 
 #### Windsurf / Trae 等其他 IDE
 
-在对应配置文件中添加：
-
-```json
-{
-  "mcpServers": {
-    "qieman": {
-      "url": "https://stargate.yingmi.com/mcp/sse",
-      "headers": {
-        "Authorization": "Bearer your-api-key-here"
-      }
-    }
-  }
-}
-```
-
-或直接使用 URL 参数方式：
+直接使用 URL 参数方式：
 
 ```json
 {
@@ -327,6 +268,8 @@ https://stargate.yingmi.com/mcp/sse?apiKey=your-api-key-here
   }
 }
 ```
+
+> ⚠️ 兼容性说明：不同客户端对 MCP 传输协议支持不完全一致，请以客户端是否支持远程 SSE MCP 为准。
 
 ### 使用示例
 
@@ -350,7 +293,7 @@ https://stargate.yingmi.com/mcp/sse?apiKey=your-api-key-here
 
 ## 技术特点
 
-- **云托管服务**：无需本地安装，通过 SSE URL 即连即用
+- **云托管服务**：无需本地部署服务端代码，在客户端配置 SSE URL 即可使用
 - **专业可靠**：基于且慢投顾多年积累的金融数据与分析模型
 - **实时更新**：支持实时获取最新基金净值、公告与市场资讯
 - **智能分析**：结合 AI 能力，提供自然语言交互式投资分析
@@ -374,4 +317,4 @@ MIT License
 
 ---
 
-**由且慢投顾提供专业金融数据支持**
+**由且慢提供专业金融数据支持**

@@ -4,7 +4,7 @@ Qieman Investment Advisory MCP Server is an intelligent investment advisory serv
 
 ## Core Capabilities
 
-### 📊 Asset & Family Financial Analysis
+### 📊 Personal & Household Finance Analysis
 
 - **Asset-Liability Analysis**: Intelligent calculation of asset-liability ratios, net worth, and core financial metrics
 - **Cash Flow Analysis**: Generate cash flow health reports based on household income/expenses and asset allocation
@@ -64,159 +64,115 @@ Qieman Investment Advisory MCP Server is an intelligent investment advisory serv
 - Research industry allocation trends and market rotation patterns
 - Backtest investment strategies and validate investment logic
 
-## Main Tool List
+## Tool List
 
-### Asset & Family Financial Analysis
+## Personal & Household Finance Analysis (5)
 
-- `AnalyzeAssetLiability` - Asset-liability analysis
-- `AnalyzeCashFlow` - Cash flow analysis
-- `AnalyzeFamilyMembers` - Family member analysis
-- `AnalyzeFinancialIndicators` - Financial indicator analysis
-- `AnalyzeIncomeExpense` - Income-expense analysis
-- `AnalyzeInvestmentPerformance` - Investment performance evaluation
+* AnalyzeAssetLiability - Analyze household assets and liabilities.
+* AnalyzeCashFlow - Analyze cash inflows, outflows, and net cash position.
+* AnalyzeFamilyMembers - Analyze family-member profile and financial roles.
+* AnalyzeFinancialIndicators - Analyze key financial health indicators.
+* AnalyzeIncomeExpense - Analyze income and expense structure.
 
-### Fund & Portfolio Analysis
+## Fund & Portfolio Analysis (8)
 
-- `AnalyzeFundRisk` - Fund risk analysis
-- `AnalyzePortfolioRisk` - Portfolio risk assessment
-- `DiagnoseFundPortfolio` - Fund holdings diagnostics
-- `GetAssetAllocation` - Asset allocation analysis
-- `GetFundAssetClassAnalysis` - Asset class penetration
-- `GetFundsBackTest` - Portfolio backtesting
-- `GetFundsCorrelation` - Correlation analysis
-- `MonteCarloSimulate` - Monte Carlo simulation
+* AnalyzeFundRisk - Assess fund-level risk characteristics.
+* AnalyzePortfolioRisk - Assess risk at portfolio level.
+* DiagnoseFundPortfolio - Diagnose fund holdings composition and structure.
+* GetAssetAllocation - Analyze asset allocation breakdown.
+* GetFundAssetClassAnalysis - Perform asset-class look-through analysis.
+* GetFundsBackTest - Run portfolio/fund backtesting.
+* GetFundsCorrelation - Analyze return correlation among funds.
+* MonteCarloSimulate - Run Monte Carlo simulation scenarios.
 
-### Fund Information Query
+## Fund Information Query (7)
 
-- `BatchGetFundNavHistory` - Batch NAV history retrieval
-- `BatchGetFundsDetail` - Batch fund details retrieval
-- `GetBatchFundPerformance` - Batch performance metrics
-- `GetFundDiagnosis` - Fund diagnostics
-- `SearchFunds` - Fund search
-- `GetPopularFund` - Popular funds
+* BatchGetFundNavHistory - Batch query historical NAV time series.
+* BatchGetFundsDetail - Batch query core fund details.
+* GetBatchFundPerformance - Batch query fund performance metrics.
+* GetFundDiagnosis - Retrieve overall fund diagnosis.
+* SearchFunds - Search funds by keyword/criteria.
+* GetPopularFund - Retrieve popular/trending funds.
+* GuessFundCode - Fuzzy-match fund code from input text.
 
-### Professional Analysis Tools
+## Holdings Features & Capability Metrics (7)
 
-- `getFundIndustryAllocation` - Industry allocation analysis
-- `getBondIndicator` - Bond indicators
-- `getFundBrinsonIndicator` - Brinson attribution
-- `getMarketTimingIndicator` - Market timing indicators
-- `GetStrategyDetails` - Strategy details
+* fund-sector-preference - Retrieve sector preference profile.
+* fund-equity-position - Retrieve equity exposure preference.
+* fund-recovery-ability - Evaluate drawdown recovery capability.
+* getFundTurnoverRate - Retrieve turnover rate (rebalancing frequency).
+* getFundIndustryPreference - Retrieve industry preference profile.
+* getFundIndustryAllocation - Retrieve industry allocation weights.
+* getFundIndustryConcentration - Retrieve industry concentration level.
 
-### Holdings Characteristics Analysis
+## Holdings / Attribution / Risk Deep-Dive (14)
 
-- `fund-sector-preference` - Sector preference
-- `fund-equity-position` - Equity position preference
-- `getFundTurnoverRate` - Fund turnover rate (rebalancing frequency)
-- `getFundIndustryPreference` - Industry preference
-- `getFundInvestmentStyleBatch` - Investment style preference
+* getQdFundAreaAllocation - Retrieve QDII geographic allocation.
+* getBondFundCreditRatingLevel - Retrieve bond credit-rating distribution.
+* getBondAllocationByFundCode - Retrieve bond-type allocation mix.
+* getStockAllocationAndMetricsByFundCode - Retrieve equity holdings and valuation/quality metrics.
+* getFundIndustryReturns - Retrieve industry-level return contribution.
+* getFundBrinsonIndicator - Retrieve Brinson attribution indicators.
+* getMarketTimingIndicator - Retrieve market-timing indicators.
+* getFundCampisiIndicator - Retrieve Campisi attribution indicators.
+* getBondIndicator - Retrieve bond risk indicators (e.g., leverage, duration, concentration).
+* getFundDiveCount - Retrieve abnormal-move/event count for bond funds.
+* filterBondFundByCreditRating - Filter bond funds by credit-rating criteria.
+* filterBondFundByBondType - Filter bond funds by bond-type style.
+* filterStockFundByStockTurnover - Filter funds by stock turnover characteristics.
+* getBondFundWithAlertRecord - Retrieve bond funds with alert records.
 
-### Capability Evaluation Indicators
+## Basic Info & Trading Rules (6)
 
-- `fund-recovery-ability` - Drawdown recovery ability
+* getFundBenchmarkInfo - Retrieve benchmark definition and metadata.
+* BatchGetFundTradeRules - Batch query fund trading rules.
+* BatchGetFundTradeLimit - Batch query trading limits and constraints.
+* BatchGetFundsSplitHistory - Batch query fund split history.
+* BatchGetFundsDividendRecord - Batch query dividend distribution records.
+* BatchGetFundsHolding - Batch query fund holdings data.
 
-### Fund Holdings Analysis
+## Strategy & Advisory (9)
 
-- `getQdFundAreaAllocation` - QDII regional allocation
-- `getBondFundCreditRatingLevel` - Bond fund credit rating query
-- `getBondAllocationByFundCode` - Bond type allocation
-- `getStockAllocationAndMetricsByFundCode` - Top holdings concentration (equity funds)
-- `getFundIndustryAllocation` - Industry allocation proportion
-- `getFundIndustryConcentration` - Industry holdings concentration
-- `BatchGetFundsHolding` - Fund holdings
+* GetStrategyDetails - Retrieve strategy details.
+* GetStrategyBenchmark - Retrieve strategy benchmark.
+* GetStrategyAssetClassAnalysis - Analyze strategy asset-class distribution.
+* BatchGetStrategiesComposition - Batch query strategy holdings composition.
+* BatchGetPoTradeComposition - Retrieve strategy trade composition.
+* StrategySearchByKeyword - Search strategies by keyword.
+* BatchGetStrategyRiskInfo - Batch query strategy risk profiles.
+* GetStrategyRiskInfo - Retrieve strategy risk profile.
+* GetFundRelatedStrategies - Retrieve advisory strategies related to target funds.
 
-### Basic Information Query
+## News & Announcements (7)
 
-- `getFundCompanyFundManageAssetsById` - Fund company AUM query
-- `getFundBenchmarkInfo` - Performance benchmark (contract benchmark)
-- `BatchGetFundsFeeRule` - Fund fee rules
-- `BatchGetFundsHolderInfo` - Holder structure
-- `BatchGetFundsSplitHistory` - Fund split records
-- `BatchGetFundsDividendRecord` - Fund dividend records
-- `BatchGetFundTradeRules` - Fund trading rules
-- `BatchGetFundTradeLimit` - Fund trading limits
+* SearchFinancialNews - Search financial news.
+* SearchManagerViewpoint - Search fund manager viewpoints.
+* searchRealtimeAiAnalysis - Retrieve real-time AI analysis on market/news.
+* SearchHotTopic - Retrieve hot financial topics.
+* searchInvestAdvisorContent - Search investment-advisory content.
+* GetFundAnnouncements - Retrieve fund announcement list.
+* GetAnnouncementContent - Retrieve full announcement content.
 
-### Valuation Indicators (Equity Funds)
+## Investment Planning & Portfolio (4)
 
-- `getStockAllocationAndMetricsByFundCode` - P/E ratio query
-- `getStockAllocationAndMetricsByFundCode` - P/B ratio query
-- `getStockAllocationAndMetricsByFundCode` - Dividend yield
-- `getStockAllocationAndMetricsByFundCode` - ROE (Return on Equity)
-- `getStockAllocationAndMetricsByFundCode` - ROA (Return on Assets)
-- `getStockAllocationAndMetricsByFundCode` - Net profit growth rate
-- `getStockAllocationAndMetricsByFundCode` - Revenue growth rate
+* GetAssetAllocationPlan - Generate/retrieve asset-allocation plan.
+* GetCompositeModel - Generate/retrieve composite investment model.
+* AnalyzeInvestmentPerformance - Evaluate investment-plan performance.
+* GetPortfolioNavHistory - Retrieve portfolio NAV history.
 
-### Performance Attribution Analysis
+## Market & Utility Tools (5)
 
-- `getFundIndustryReturns` - Industry returns
-- `getFundBrinsonIndicator` - Brinson attribution
-- `getMarketTimingIndicator` - Equity position timing
-- `getFundCampisiIndicator` - Campisi attribution
-
-### Risk Indicators
-
-- `getFundRiskInfo` - Fund risk level
-- `getBondIndicator` - Bond fund risk (leverage, duration, concentration)
-- `getStockAllocationAndMetricsByFundCode` - Stock liquidity query (equity funds)
-- `getFundDiveCount` - Bond fund anomaly
-- `GetStrategyRiskInfo` - Strategy risk
-
-### Fund Screening
-
-- `filterBondFundByCreditRating` - Credit rating screening
-- `filterBondFundByBondType` - Bond type style screening
-- `filterStockFundByStockTurnover` - Stock turnover screening
-- `getBondFundWithAlertRecord` - Query bond funds with NAV anomalies
-
-### Strategy & Advisory
-
-- `GetStrategyDetails` - Strategy details query
-- `GetStrategyBenchmark` - Strategy benchmark query
-- `GetStrategyAssetClassAnalysis` - Strategy asset class allocation
-- `BatchGetStrategiesComposition` - Batch strategy holdings query
-- `BatchGetPoTradeComposition` - Strategy trading composition
-- `StrategySearchByKeyword` - Strategy keyword search
-- `BatchGetStrategyRiskInfo` - Strategy risk matching
-- `GetFundRelatedStrategies` - Filter advisory strategies by holdings
-- `GetSecurityPortfolio` - Fund top holdings securities
-
-### News & Announcements
-
-- `SearchFinancialNews` - Financial news
-- `SearchManagerViewpoint` - Fund manager viewpoints
-- `searchRealtimeAiAnalysis` - Real-time AI news analysis
-- `SearchHotTopic` - Hot financial topics
-- `searchInvestAdvisorContent` - Search advisory content
-- `GetFundAnnouncements` - Fund announcements query
-- `GetAnnouncementcontents` - Get announcement contents
-
-### Market Data
-
-- `GetLatestQuotations` - Market thermometer
-
-### Investment Planning
-
-- `GetAssetAllocationPlan` - Get asset allocation plan
-- `GetCompositeModel` - Get fund investment plan
-- `AnalyzeInvestmentPerformance` - Investment plan performance analysis
-
-### Portfolio & Account
-
-- `GetPortfolioNavHistory` - Portfolio NAV history
-- `GuessFundCode` - Fund code fuzzy matching
-
-### Auxiliary Tools
-
-- `RenderEchart` - Chart rendering
-- `RenderHtmlToPdf` - Report generation
-- `GetCurrentTime` - Time utility
-- `GetTxnDayRange` - Trading day query
+* GetLatestQuotations - Retrieve latest market quotes/market thermometer.
+* RenderEchart - Render ECharts configuration/output.
+* RenderHtmlToPdf - Convert HTML report to PDF.
+* GetCurrentTime - Retrieve current system time.
+* GetTxnDayRange - Query trading-day range.
 
 ## Quick Start
 
 ### Access Method: MCP-SSE (Cloud Hosted)
 
-Qieman Investment Advisory MCP Server uses a **cloud-hosted model**. No local installation or code execution required - simply connect via SSE URL.
+Qieman Investment Advisory MCP Server uses a **cloud-hosted model**. No local server deployment is required; you only need to configure the SSE endpoint in your client. Some clients (such as Claude Desktop) require Node.js/npm to run a bridge command.
 
 ### Step 1: Get API Key
 
@@ -235,11 +191,11 @@ Add to your Claude Desktop configuration file:
   "mcpServers": {
     "qieman": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-sse"],
-      "env": {
-        "SSE_URL": "https://stargate.yingmi.com/mcp/sse",
-        "QIEMAN_API_KEY": "your-api-key-here"
-      }
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://stargate.yingmi.com/mcp/sse?apiKey=your-api-key-here"
+      ]
     }
   }
 }
@@ -247,8 +203,8 @@ Add to your Claude Desktop configuration file:
 
 **Configuration Notes**:
 
-- Replace `your-api-key-here` with your actual API Key
-- `SSE_URL`: Qieman MCP service address (fixed value)
+- `mcp-remote`: Bridges a remote SSE MCP server to local stdio (recognized by Claude Desktop)
+- `https://stargate.yingmi.com/mcp/sse?apiKey=your-api-key-here`: Qieman MCP SSE endpoint (replace `your-api-key-here` with your real API Key)
 
 ### Step 3: Use in Other MCP Clients
 
@@ -299,24 +255,11 @@ https://stargate.yingmi.com/mcp/sse?apiKey=your-api-key-here
 - Recommended model: Volcano Engine Deepseek-v3 model
 - Model name: `deepseek-v3-250324`
 
-#### Windsurf / Trae/ Other IDEs
+#### Windsurf / Trae / Other IDEs
 
 Add to corresponding configuration file:
 
-```json
-{
-  "mcpServers": {
-    "qieman": {
-      "url": "https://stargate.yingmi.com/mcp/sse",
-      "headers": {
-        "Authorization": "Bearer your-api-key-here"
-      }
-    }
-  }
-}
-```
-
-Or use URL parameter method directly:
+URL parameter method directly:
 
 ```json
 {
@@ -327,6 +270,8 @@ Or use URL parameter method directly:
   }
 }
 ```
+
+> ⚠️ Compatibility note: MCP transport support varies by client. Please verify that your client supports remote SSE MCP.
 
 ### Usage Examples
 
@@ -350,7 +295,7 @@ Please help me screen equity funds with annualized returns exceeding 15% and max
 
 ## Technical Features
 
-- **Cloud Hosted**: No local installation required, connect via SSE URL instantly
+- **Cloud Hosted**: No local server deployment required; connect by configuring the SSE URL in your client
 - **Professional & Reliable**: Based on Qieman's years of accumulated financial data and analytical models
 - **Real-time Updates**: Support real-time retrieval of latest fund NAV, announcements, and market news
 - **Intelligent Analysis**: Combined with AI capabilities for natural language interactive investment analysis
@@ -369,7 +314,7 @@ MIT License
 ## Contact
 
 - GitHub: [@Chris1Wang3](https://github.com/Chris1Wang3)
-- Issue Tracker:wangjaye@yingmi.cn
+- Issue Tracker: wangjaye@yingmi.cn
 - Official Website: [https://qieman.com/mcp](https://qieman.com/mcp)
 
 ---
